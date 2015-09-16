@@ -3,7 +3,6 @@
 # CAN I BUMP ?
 
 ## About
-
 canibump is a simple command-line tool to check if
 [canibump website](https://canibump.cfapps.io) is **YES** or **NO**.
 
