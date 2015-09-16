@@ -39,7 +39,7 @@ func check(url string) bool {
 
 func main() {
 	ok := check(canIBumpUrl)
-	if ok {
+	if !ok {
 		fmt.Println("Can I bump status is: NO")
 		os.Exit(1)
 	}
