@@ -9,6 +9,9 @@ import (
 
 const canIBumpUrl = "https://canibump.cfapps.io/"
 
+const red = "\x1b[31;1m"
+const green = "\x1b[32;1m"
+
 type status struct {
 	CanIBump bool `json:"can_I_bump"`
 }
@@ -40,8 +43,8 @@ func check(url string) bool {
 func main() {
 	ok := check(canIBumpUrl)
 	if !ok {
-		fmt.Println("Can I bump status is: NO")
+		fmt.Printf("Can I bump status is: %sNO\n", red)
 		os.Exit(1)
 	}
-	fmt.Println("Can I bump status is: YES")
+	fmt.Printf("Can I bump status is: %sYES\n", green)
 }
