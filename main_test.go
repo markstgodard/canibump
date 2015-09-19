@@ -19,19 +19,16 @@ func TestCheck(t *testing.T) {
 	ts := newTestServer(`{"can_i_bump": true }`)
 	defer ts.Close()
 
-	ok := check(ts.URL)
-	if !ok {
-		t.Fail()
+	if ok := check(ts.URL); !ok {
+		t.Fatalf("Expected canibump to be 'true'")
 	}
-
 }
 
 func TestCheckCantBump(t *testing.T) {
 	ts := newTestServer(`{"can_i_bump": false }`)
 	defer ts.Close()
 
-	ok := check(ts.URL)
-	if ok {
-		t.Fail()
+	if ok := check(ts.URL); ok {
+		t.Fatalf("Expected canibump to be 'false'")
 	}
 }

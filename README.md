@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/markstgodard/canibump.svg?branch=master)](https://travis-ci.org/markstgodard/canibump)
-
 # CAN I BUMP ?
 
 ## About
