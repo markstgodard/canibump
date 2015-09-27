@@ -20,7 +20,7 @@ func TestCheck(t *testing.T) {
 	defer ts.Close()
 
 	if ok := check(ts.URL); !ok {
-		t.Fatalf("Expected canibump to be 'true'")
+		t.Error("Expected canibump to be 'true', got ", ok)
 	}
 }
 
@@ -29,6 +29,6 @@ func TestCheckCantBump(t *testing.T) {
 	defer ts.Close()
 
 	if ok := check(ts.URL); ok {
-		t.Fatalf("Expected canibump to be 'false'")
+		t.Error("Expected canibump to be 'false', got ", ok)
 	}
 }
